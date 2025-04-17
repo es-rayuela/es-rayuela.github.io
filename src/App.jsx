@@ -27,18 +27,28 @@ export default function RayuelaSite() {
 }
 
 function Header() {
+  const handleSmoothScroll = (e) => {
+    const href = e.currentTarget.getAttribute('href');
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
   return (
     <header className="bg-[#f2ad5e] p-6 flex justify-between items-center shadow-md">
-      <img src="/images/LOGO-RAYUELA.png" alt="Logo Rayuela" className="h-12" />
+      <img src="/assets/img/logo_rayuela.png" alt="Logo Rayuela" className="h-12" />
       <nav className="space-x-6 text-lg">
-        <a href="#home" className="hover:text-[#ed4c87] transition-colors">Início</a>
-        <a href="#about" className="hover:text-[#ed4c87] transition-colors">Sobre</a>
-        <a href="#method" className="hover:text-[#ed4c87] transition-colors">Abordagem</a>
-        <a href="#journey" className="hover:text-[#ed4c87] transition-colors">Sua Jornada</a>
-        <a href="#services" className="hover:text-[#ed4c87] transition-colors">Serviços</a>
-        <a href="#taster" className="hover:text-[#ed4c87] transition-colors">Experimente</a>
-        <a href="#testimonials" className="hover:text-[#ed4c87] transition-colors">Depoimentos</a>
-        <a href="#contact" className="hover:text-[#ed4c87] transition-colors">Contato</a>
+        <a href="#home" onClick={handleSmoothScroll} className="hover:text-[#ed4c87] transition-colors">Início</a>
+        <a href="#about" onClick={handleSmoothScroll} className="hover:text-[#ed4c87] transition-colors">Sobre</a>
+        <a href="#method" onClick={handleSmoothScroll} className="hover:text-[#ed4c87] transition-colors">Abordagem</a>
+        <a href="#journey" onClick={handleSmoothScroll} className="hover:text-[#ed4c87] transition-colors">Sua Jornada</a>
+        <a href="#services" onClick={handleSmoothScroll} className="hover:text-[#ed4c87] transition-colors">Serviços</a>
+        <a href="#taster" onClick={handleSmoothScroll} className="hover:text-[#ed4c87] transition-colors">Experimente</a>
+        <a href="#testimonials" onClick={handleSmoothScroll} className="hover:text-[#ed4c87] transition-colors">Depoimentos</a>
+        <a href="#contact" onClick={handleSmoothScroll} className="hover:text-[#ed4c87] transition-colors">Contato</a>
       </nav>
     </header>
   );
