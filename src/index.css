@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -116,5 +120,54 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+body { 
+  font-family: "Nunito";
+}
+h1, h2, h3 {
+  font-family: "Barriecito";
+}
+#home {
+  position: relative;
+  overflow: hidden;
+}
+#home div {
+  z-index: 2;
+}
+#home .bg-home {
+  position: absolute;
+  bottom: -32%;
+  right: -10%;
+  z-index: 1;
+  width: 40%;
+}
+#about{
+  background-image: url('/src/assets/img/bg_about.svg');
+  background-repeat: no-repeat;
+  background-size: auto 115%;
+  background-position: -15% 0;
+} 
+#method {
+  background-image: url('/src/assets/img/bg_method.svg');
+  background-repeat: no-repeat;
+  background-size: auto 115%;
+  background-position: -30% 0;
+}
+#journey {
+  background-image: url('/src/assets/img/bg_journey.svg');
+  background-repeat: no-repeat;
+  background-size: auto 115%;
+  background-position: 120% 0;
+}
+.font-barriecito { 
+  font-family: "Barriecito";
+}
+@media (max-width: 1024px) {
+  #about{
+    background-image: linear-gradient(to right, rgba(255,255,255, 0.8) 0 100%), url('/src/assets/img/bg_about.svg');
+  } 
+  #journey {
+    background-image: linear-gradient(to right, rgba(255,255,255, 0.8) 0 100%), url('/src/assets/img/bg_journey.svg');
   }
 }
