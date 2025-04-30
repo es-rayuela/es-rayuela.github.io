@@ -63,7 +63,7 @@ function Header() {
     <>
       <div className={`${scrolled ? "fixed rounded-full top-4 left-4" : "static"} lg:fixed lg:top-4 lg:left-4 z-50 transition-all duration-300 bg-[#6ca7b7] px-4 py-2`}>
         <img
-          src={scrolled ? "/src/assets/img/logo_rayuela_h.png" : "/src/assets/img/logo_rayuela.jpg"}
+          src={scrolled ? `/logo_rayuela_h.png` : `/logo_rayuela.jpg`}
           alt="Logo Rayuela"
           className={`transition-all duration-300 ${scrolled ? "h-12" : "h-70 mx-auto"}`}
         />
