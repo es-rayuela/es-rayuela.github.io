@@ -13,7 +13,7 @@ export default function RayuelaSite() {
   return (
     <>
       <Header />  
-      <main className="font-nunito bg-[#ffffff] text-[#242736]">
+      <main className="font-nunito bg-[#ffffff] text-[#242736]" role="main">
         <Home />
         <About />
         <Method />
@@ -68,7 +68,7 @@ function Header() {
           className={`transition-all duration-300 ${scrolled ? "h-12" : "h-70 mx-auto"}`}
         />
       </div>
-      <button
+      <Button
         onClick={toggleMenu}
         className="fixed top-4 right-4 z-50 bg-[#ed4c87] text-white p-3 rounded-full shadow-lg w-24 h-24"
         aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
@@ -78,7 +78,7 @@ function Header() {
         ) : (
           <span className="text-4xl font-bold">☰</span>
         )}
-      </button>
+      </Button>
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -493,25 +493,25 @@ function Testimonials() {
         </div>
 
         {/* Setas de navegação */}
-        <button
+        <Button
           onClick={prevSlide}
           className="absolute -left-7 top-3/7 transform -translate-y-1/2 bg-white rounded-full shadow p-2 cursor-pointer"
           aria-label="Anterior"
         >
           ‹
-        </button>
-        <button
+        </Button>
+        <Button
           onClick={nextSlide}
           className="absolute -right-7 top-3/7 transform -translate-y-1/2 bg-white rounded-full shadow p-2 cursor-pointer"
           aria-label="Próximo"
         >
           ›
-        </button>
+        </Button>
 
         {/* Bolinhas de navegação */}
         <div className="flex justify-center mt-6 space-x-2">
           {Array.from({ length: totalSlides }).map((_, i) => (
-            <button
+            <Button
               key={i}
               onClick={() => setIndex(i)}
               className={`w-3 h-3 rounded-full cursor-pointer ${
