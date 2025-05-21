@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
-import { FaWhatsapp, FaUser, FaUserFriends, FaUsers, FaMoneyBillWave, FaPlusCircle, FaHeadphones, FaBook, FaPhotoVideo, FaRegEnvelope, FaInstagram } from "react-icons/fa";
+import { FaWhatsapp, FaUser, FaUserFriends, FaUsers, FaMoneyBillWave, FaPlusCircle, FaHeadphones, FaBook, FaPhotoVideo, FaRegEnvelope, FaInstagram, FaPen, FaHeart, FaFilm } from "react-icons/fa";
 
 export default function RayuelaSite() {
   const [selectedService, setSelectedService] = useState("none");
@@ -22,6 +22,7 @@ export default function RayuelaSite() {
         {selectedService === "Curso Regular" && <CourseRegular />}
         {selectedService === "Projeto Personalizado" && <ProjectPersonal />}
         {selectedService === "Mentoria para Autodidatas" && <Mentorship />}
+        {selectedService === "¡Clubes!" && <Clubes />}
         <Taster />
         <Testimonials />
         <Contact />
@@ -225,6 +226,12 @@ function Services() {
 
   const services = [
     {
+      title: "Mentoria para Autodidatas",
+      description:
+        "Para quem quer aprender com mais autonomia e flexibilidade horária: planos de estudos semanais e um encontro síncrono mensal.",
+      bg: '#f2ad5e',
+    },
+    {
       title: "Curso Regular",
       description:
         "Para quem quer aprender espanhol acompanhando os níveis do Quadro Europeu Comum de Referência para as Línguas (CEFR).",
@@ -237,11 +244,10 @@ function Services() {
       bg: '#6ca7b7',
     },
     {
-      title: "Mentoria para Autodidatas",
-      description:
-        "Para quem quer aprender com mais autonomia e flexibilidade horária: planos de estudos semanais e um encontro síncrono mensal.",
-      bg: '#f2ad5e',
-    },
+      title: "¡Clubes!",
+      description: "Seja do livro; do audiovisual; de escrita; ou de bem-estar e autodesenvolvimento: clubes para você se encontrar com outras pessoas com gostos em comum e falar, viver e aprender en español.",
+      bg: '#fff'
+    }
   ];
   const handleSmoothScroll = () => {
     if(window.matchMedia("(max-width: 1024px)").matches) {
@@ -277,6 +283,7 @@ function Services() {
           {selected === "Curso Regular" && <CourseRegular />}
           {selected === "Projeto Personalizado" && <ProjectPersonal />}
           {selected === "Mentoria para Autodidatas" && <Mentorship />}
+          {selected === "¡Clubes!" && <Clubes />}
         </div>
       </div>
     </section>
@@ -421,6 +428,58 @@ function Mentorship() {
               <h3 className="text-xl font-semibold mb-2">Valor</h3>
             </div>
             <p>R$360/mês</p>
+          </Card>
+        </div>
+      </div>
+      <p className="text-sm text-center mt-4">*Válido para todas as modalidades: para pagamentos feitos por boleto antes da data de vencimento, 10% de desconto no valor da mensalidade.</p>
+      <div className="flex justify-center">
+        <a
+          href="https://wa.me/5548998091771"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#f2ad5e] font-barriecito text-white p-4 mt-8 rounded-lg shadow-lg flex items-center justify-center hover:bg-[#d99b54] transition-colors"
+          aria-label="Converse no WhatsApp"
+        >
+          <FaWhatsapp className="text-2xl mr-4" /> Inscreva-se!
+        </a>
+      </div>
+    </section>
+  );
+}
+function Clubes() {
+  return (
+    <section className="p-6 lg:p-12 bg-white text-[#242736] rounded-lg h-full">
+      <h2 className="text-3xl font-barriecito text-center text-[#f2ad5e] mb-6">¡Clubes!</h2>
+      <div className="max-w-3xl mx-auto space-y-4 text-lg">
+        <p>Se você curte livros; séries e filmes; escrita criativa ou explorar diferentes gêneros textuais; ou temas ligados ao bem-estar e autodesenvolvimento, aqui tem um clube para você!</p>
+        <p>Os ¡Clubes! são encontros em grupo para quem quer conviver em espanhol de forma leve e significativa, com pessoas que compartilham interesses semelhantes. Cada clube é formado por um número determinado de encontros ao vivo, com um cronograma claro e interessante: você saberá exatamente o que vamos discutir, assistir, experimentar ou criar em cada encontro.</p>
+        <p>É um espaço de troca e prática real — onde o idioma deixa de ser apenas conteúdo e vira experiência.</p>
+        <p>Ao final do ciclo, você recebe um feedback personalizado, com observações sobre pontos a desenvolver no seu espanhol, explicações e sugestões de exercícios para continuar avançando com autonomia.</p>
+        <p>É um formato pensado especialmente para quem já tem uma boa base no idioma ou para quem já fala muito bem, mas sente falta de oportunidades para manter o contato com o idioma de forma prazerosa e significativa.</p>
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <Card className="bg-white border border-[#f2ad5e] rounded-xl text-center p-6">
+            <div>
+              <FaBook className="text-3xl text-[#f2ad5e] mx-auto mb-1 h-12" />
+              <h3 className="text-xl font-semibold mb-2">Clube do Livro</h3>
+            </div>
+          </Card>
+          <Card className="bg-white border border-[#f2ad5e] rounded-xl text-center p-6">
+            <div>
+              <FaFilm className="text-3xl text-[#f2ad5e] mx-auto mb-1 h-12" />
+              <h3 className="text-xl font-semibold mb-2">Clube do Audiovisual</h3>
+            </div>
+          </Card>
+          <Card className="bg-white border border-[#f2ad5e] rounded-xl text-center p-6">
+            <div>
+              <FaPen className="text-3xl text-[#f2ad5e] mx-auto mb-1 h-12" />
+              <h3 className="text-xl font-semibold mb-2">Clube de escrita: gêneros textuais ou escritura criativa</h3>
+            </div>
+          </Card>
+          <Card className="bg-white border border-[#f2ad5e] rounded-xl text-center p-6">
+            <div>
+              <FaHeart className="text-3xl text-[#f2ad5e] mx-auto mb-1 h-12" />
+              <h3 className="text-xl font-semibold mb-2">Clube de bem-estar e autodesenvolvimento</h3>
+            </div>
           </Card>
         </div>
       </div>
