@@ -15,8 +15,8 @@ export default function RayuelaSite() {
       <Header />  
       <main className="font-nunito bg-[#ffffff] text-[#242736]" role="main">
         <Home />
-        <About />
         <Method />
+        <About />
         <Journey />
         <Services setSelectedService={setSelectedService} />
         {selectedService === "Curso Regular" && <CourseRegular />}
@@ -61,7 +61,7 @@ function Header() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
   return (
     <>
-      <div className={`${scrolled ? "fixed rounded-full top-4 left-4" : "static"} lg:fixed lg:top-4 lg:left-4 z-50 transition-all duration-300 bg-[#6ca7b7] px-4 py-2`}>
+      <div className={`lg:fixed lg:left-4 z-50 transition-all duration-300 bg-[#6ca7b7] px-4 py-2 ${scrolled ? "fixed rounded-full lg:top-4 left-4" : "static lg:top-24"}`}>
         <img
           src={scrolled ? `/logo_rayuela_h.png` : `/logo_rayuela.jpg`}
           alt="Logo Rayuela"
@@ -90,8 +90,8 @@ function Header() {
           >
             {[
               { href: "#home", label: "Início" },
-              { href: "#about", label: "Sobre" },
               { href: "#method", label: "Abordagem" },
+              { href: "#about", label: "Sobre" },
               { href: "#journey", label: "Sua Jornada" },
               { href: "#services", label: "Serviços" },
               { href: "#taster", label: "Experimente" },
@@ -118,7 +118,7 @@ function Header() {
 function WhatsappButton() {
   return (
     <a
-      href="https://wa.me/5548998091771"
+      href="https://wa.me/5541988162747"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed z-50 right-4 bottom-4 bg-[#25D366] text-white p-4 rounded-full shadow-lg flex items-center justify-center hover:bg-[#1ebd5a] transition-colors"
@@ -137,9 +137,9 @@ function Home() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
         >
-        <h2 className="text-4xl font-barriecito mb-4">Mais que um curso. Uma travessia.</h2>
+        <h2 className="text-4xl font-barriecito mb-4">SENTIDO PARA TU ESPAÑOL</h2>
         <p className="text-xl max-w-3xl mx-auto">
-          Se você chegou aqui, provavelmente sente que precisa de algo a mais com o espanhol. Seja desbloquear a fala, retomar os estudos, ganhar autonomia, ou criar conexão com o idioma e a cultura. Na Rayuela, a gente começa pelo desejo e caminha junto.
+          <strong>¡BIENVENIDA! ¡BIENVENIDO!</strong> Se você chegou aqui, é porque precisa desenvolver algo em relação ao seu espanhol, certo? Seja <strong>aprender do zero</strong> ou <strong>dar continuidade</strong> ao seu aprendizado; fluir na <strong>conversação</strong>; desenvolver a <strong>escrita</strong>; preparar-se melhor para uma <strong>viagem</strong> ou para desempenhar funções no seu <strong>trabalho</strong>; ganhar mais <strong>confiança e autonomia</strong>; ou porque deseja estabelecer uma verdadeira <strong>conexão com o idioma e a cultura</strong>. Na Rayuela, <strong>o seu espanhol vai ganhar sentido</strong>, com toda a riqueza que essa palavra traz: sentido como rumo, <strong>direcionamento</strong>; e sentido como algo <strong>significativo</strong> - que faz sentido para você!
         </p>
       </motion.div>
       <div className="bg-home">
@@ -149,35 +149,54 @@ function Home() {
   );
 }
 
-function About() {
+function Method() {
   return (
-    <section id="about" className="p-6 md:p-12 lg:p-24 bg-white text-[#242736]">
+    <section id="method" className="p-6 md:p-12 lg:p-24 bg-white text-[#242736]">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
         >
-        <h2 className="text-3xl font-barriecito text-center text-[#ed4c87] mb-8">A Rayuela</h2>
+        <h2 className="text-3xl font-barriecito text-center text-[#ed4c87] mb-8">O quê você vai aprender e como você vai aprender</h2>
         <div className="max-w-3xl mx-auto space-y-4 text-lg">
-          <p>A Rayuela nasceu da certeza de que aprender espanhol pode ser uma experiência afetiva, artística e transformadora. Inspirada na amarelinha, que brincamos na infância e que dá nome a um romance de Cortázar, a Rayuela é um caminho em espiral, com pulos, fases, descobertas e renascimentos.</p>
-          <p>A cada passo da jornada, você se aproxima de uma versão mais conectada de si. A cada aula, você se reconstrói um pouco mais. O espanhol aqui não é fim — é ponte. É voz, identidade e sentido.</p>
-          <p>Quem ensina é Bianka: professora licenciada em Letras Espanhol pela UFSC com mérito acadêmico, tradutora, artista e viajante de mundos latinos. Ela traz para as aulas sua experiência na Argentina, na Espanha e em muitos outros cantinhos da língua espanhola. Ensina com beleza, escuta, humor e sensibilidade.</p>
+          <p>Você vai aprender a <strong>falar, escrever e ler em espanhol</strong> + <strong>entender quando falarem com você em espanhol</strong>, além de <strong>expandir muito o seu conhecimento e sua experiência cultural</strong> de países que têm o espanhol como  um de seus idiomas oficiais.</p>
+          <p>Agora, o "como"!</p> 
+          <p><strong>Você já parou para pensar que aprender um idioma vai muito além de decorar regras ou traduzir palavras?</strong> Que, na verdade, é um convite para se expressar, conectar e descobrir o mundo sob outra perspectiva?</p>
+          <p>Na <strong>Rayuela</strong>, utilizamos <strong>três abordagens modernas e potentes</strong>: a <strong>Metodologia Comunicativa</strong>, a <strong>Abordagem por Tarefas</strong> e o <strong>Ensino por Projetos</strong>. Todas elas partem de <strong>uma mesma ideia</strong>: <strong>o idioma se aprende usando-o. Vivendo-o. Colocando-o em ação</strong>.</p>
+          <p>Com a <strong>Metodologia Comunicativa</strong>, a aula se torna um espaço de troca real. Falar sobre si, interagir com o outro, negociar sentidos. Aqui, o erro não é um problema, mas parte do caminho. <strong>A comunicação vem antes da perfeição</strong>.</p>
+          <p>Com a <strong>Abordagem por Tarefas</strong>, a língua ganha função: pedir informação, resolver um conflito, planejar uma viagem. O foco não está na regra, mas na ação. A <strong>gramática</strong> aparece, sim, mas <strong>como uma ferramenta</strong>, não como ponto de partida.</p>
+          <p>Com o <strong>Ensino por Projetos</strong>, o idioma é ponte para <strong>criar algo com propósito</strong>. Um podcast, uma campanha, uma entrevista. Você se torna autora/autor, protagonista de uma jornada que ultrapassa os limites da sala de aula.</p>
+          <p>O que une essas três abordagens é o respeito pela linguagem como vida em movimento. É o compromisso com <strong>aulas significativas, conectadas com o mundo real</strong>.</p>
+        </div>
+        <div className="flex justify-center">
+          <a
+            href="https://wa.me/5541988162747"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#6ca7b7] font-barriecito text-white p-4 mt-8 rounded-lg flex items-center justify-center hover:bg-[#568592] transition-colors border-white border-2"
+            aria-label="Converse no WhatsApp"
+          >
+            <FaWhatsapp className="text-2xl mr-4" /> Adorei! Quero começar!
+          </a>
         </div>
       </motion.div>
     </section>
   );
 }
 
-function Method() {
+function About() {
   return (
-    <section id="method" className="p-6 md:p-12 lg:p-24 bg-[#ed4c87]">
+    <section id="about" className="p-6 md:p-12 lg:p-24 bg-[#ed4c87]">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 text-lg items-center">
         <div className="lg:col-span-3 space-y-4 bg-[#242736] text-white p-12 rounded-lg">
-          <h2 className="text-3xl font-barriecito text-center text-[#ed4c87] mb-8">Como ensinamos</h2>
+        <h2 className="text-3xl font-barriecito text-center text-[#ed4c87] mb-8">A Rayuela</h2>
           <div className="max-w-3xl mx-auto space-y-4 text-lg">
-            <p>Ensinamos com presença e escuta. Usamos a metodologia comunicativa, que valoriza a comunicação real desde o primeiro dia. Trabalhamos as quatro habilidades (fala, escuta, leitura e escrita), sempre de forma integrada, personalizada e significativa.</p>
-            <p>Todo o conteúdo nasce de dois pilares: o livro de apoio (<em>Gente Hoy</em>) e propostas autorais construídas com base em materiais autênticos — músicas, memes, filmes, redes sociais, notícias, jogos e cultura pop. A gramática aparece quando faz sentido, e o foco é a fluidez, a compreensão, o prazer.</p>
-            <p>O resultado? Aulas envolventes, memoráveis e que te transformam por dentro.</p>
+            <p>A Rayuela foi fundada por <strong>Bianka Silva</strong>, professora <strong>licenciada com mérito acadêmico em Letras Espanhol</strong> pela UFSC, com 7 anos ininteruptos de experiência no ensino de espanhol para brasileiras/os, <strong>tradutora</strong> com mais de 10 anos de experiência, <strong>artista</strong> do movimento e <strong>viajante</strong> de mundos latinos.</p>
+            <p>A <strong>Rayuela</strong> nasceu da certeza de que <strong>aprender espanhol</strong> pode ser uma <strong>experiência</strong> ao mesmo tempo <strong>leve</strong>, <strong>profunda</strong>, <strong>prazeirosa</strong> e <strong>transformadora</strong>.</p>
+            <p>O nome Rayuela tem dupla <strong>inspiração</strong>: em um livro de mesmo nome, do autor argentino Julio Cortázar; e no jogo da amarelinha - <em>Rayuela</em>, em espanhol.</p> <p>O livro de Cortázar é célebre por ser disruptivo: é uma <strong>obra-prima</strong> da literatura latino-americana que desafia a leitura tradicional com sua estrutura não linear e seu jogo interativo com o leitor.</p>
+            <p>E o jogo da amarelinha? É um jogo dinâmico em que, quando estamos bricando, estamos imersos no momento presente, para nos equilibrarmos, jogarmos e conseguirmos avançar. A graça é mais o percurso que a linha de chegada, ainda que a linha de chegada seja o próprio Céu.</p>
+            <p>Assim como no jogo da amarelinha e no livro de Cortázar, acreditamos que o <strong>melhor</strong> aprendizado do <strong>espanhol</strong> se dá quando nos envolvemos nessa jornada de maneira <strong>autêntica</strong>, com <strong>liberdade</strong> e uma boa dose de <strong>autonomia</strong> para viver nossa própria experiência, para traçar nosso próprio trajeto: que é o próprio processo de aprendizagem do espanhol.</p>           <p>Na <strong>Rayuela</strong>, a cada aula você se <strong>envolve</strong> mais com o <strong>idioma e a cultura</strong> e desenvolve um <strong>espanhol significativo para você</strong> e que, ao mesmo tempo, leva você a <strong>se conectar com os outros</strong>. <strong>O espanhol aqui não é fim — é ponte</strong>. É <strong>voz, identidade e sentido</strong>.</p>
+            <p>Bianka traz para as aulas sua experiência de anos na Argentina, na Espanha e em outros locais que expressam sua identidade e cultura por meio da língua espanhola. Ensina com <strong>escuta, dedicação, humor e sensibilidade</strong>.</p>
           </div>
         </div>
       </div>
@@ -190,13 +209,12 @@ function Journey() {
     <section id="journey" className="p-6 md:p-12 lg:p-24 bg-white text-[#242736]">
       <h2 className="text-3xl font-barriecito text-center text-[#6ca7b7] mb-8">Sua Jornada pela Rayuela 🧡</h2>
       <div className="max-w-3xl mx-auto space-y-4 text-lg">
-        <p>Cada aluno(a) percorre sua própria Rayuela, mas todos vivem uma experiência que vai muito além da aula ao vivo. Veja o que espera por você:</p>
+        <p>Cada aluna/o percorre sua própria Rayuela, mas todos vivem uma experiência que vai além dos momentos de aula ao vivo. Veja o que espera por você:</p>
         <ul className="list-disc pl-5 space-y-2">
-          <li><strong>Antes de começar:</strong> você recebe um documento de onboarding com orientações, expectativas e dicas práticas de como tirar o melhor proveito do curso.</li>
-          <li><strong>Durante o curso:</strong> você tem acesso à sua página personalizada no Notion, com materiais da aula, portfólio, feedbacks, espaço para dúvidas, sugestões culturais e até um habit tracker para nutrir o espanhol no dia a dia.</li>
-          <li><strong>Ao final:</strong> você recebe um certificado e um presente: um material exclusivo chamado "Como cuidar do seu espanhol a partir de agora".</li>
+          <li><strong>Antes de começarmos</strong>, você recebe um documento de <em>onboarding</em> com orientações, expectativas e dicas práticas para que você possa tirar o melhor proveito da sua jornada.</li>
+          <li><strong>Durante a sua jornada</strong> você tem acesso a uma página personalizada no Notion, com materiais da aula, portfólio com propostas exclusivas, feedback personalizado, espaço para dúvidas, sugestões culturais e até um <em>habit tracker</em> para ajudar você a nutrir e construir o seu espanhol no dia a dia.</li>
+          <li><strong>Ao final da sua jornada</strong> você recebe um certificado e um mimo: um material exclusivo chamado "Como cuidar do seu espanhol a partir de agora", com orientações para que você possa manter os avanços que teve ao longo da sua aprendizagem.</li>
         </ul>
-        <p>Na Rayuela, a jornada é viva, afetiva, divertida e inesquecível. E o melhor: ela é sua. 🏹</p>
       </div>
     </section>
   );
@@ -413,7 +431,7 @@ function Taster() {
   return (
     <section id="taster" className="p-6 lg:p-12 bg-[#ed4c87] text-white text-center">
       <h2 className="text-3xl font-barriecito mb-6">Sinta um gostinho da Rayuela ✨</h2>
-      <p className="text-lg max-w-2xl mx-auto mb-6">Quer sentir como é estudar espanhol de um jeito único, afetivo e criativo? Explore nossos materiais gratuitos:</p>
+      <p className="text-lg max-w-2xl mx-auto mb-6">Quer sentir como é estudar espanhol de um jeito único? Explore nossos materiais gratuitos:</p>
       <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         <Card className="bg-white border border-[#ed4c87] rounded-xl text-center p-4 gap-0">
           <FaHeadphones className="text-3xl text-[#ed4c87] mx-auto mb-1 h-12" />
@@ -421,14 +439,14 @@ function Taster() {
         </Card>
         <Card className="bg-white border border-[#ed4c87] rounded-xl text-center p-4 gap-0">
           <FaBook className="text-3xl text-[#ed4c87] mx-auto mb-1 h-12" />
-          <p>Ebook gratuito com dicas, atividades e inspiração Rayuelística</p>
+          <p>Ebook gratuito cque vai te ajudar a reconhecer a principais interferências do português no seu espanhol - com atividades e inspiração Rayuelística</p>
         </Card>
         <Card className="bg-white border border-[#ed4c87] rounded-xl text-center p-4 gap-0">
           <FaPhotoVideo className="text-3xl text-[#ed4c87] mx-auto mb-1 h-12" />
           <p>Uma aula</p>
         </Card>
       </div>
-      <p className="mt-4">É só clicar, baixar, dançar e aprender. 💃🏻</p>
+      <p className="mt-4">É só clicar, baixar e aproveitar.💃🏻</p>
     </section>
   );
 }
@@ -521,6 +539,17 @@ function Testimonials() {
             />
           ))}
         </div>
+      </div>
+      <div className="flex justify-center">
+        <a
+          href="https://wa.me/5548998091771"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-none font-barriecito text-[#242736] p-4 mt-8 rounded-lg flex items-center justify-center hover:bg-[#d99b54] transition-colors border-[#242736] border-1"
+          aria-label="Converse no WhatsApp"
+        >
+          <FaWhatsapp className="text-2xl mr-4" /> Adorei! Quero começar!
+        </a>
       </div>
     </section>
   );

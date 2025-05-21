@@ -142,17 +142,17 @@ h1, h2, h3 {
   z-index: 1;
   width: 40%;
 }
-#about{
+#method{
   background-image: url('/src/assets/img/bg_about.svg');
   background-repeat: no-repeat;
-  background-size: auto 115%;
-  background-position: -15% 0;
+  background-size: auto 90%;
+  background-position: -30% 10%;
 } 
-#method {
+#about {
   background-image: url('/src/assets/img/bg_method.svg');
   background-repeat: no-repeat;
-  background-size: auto 115%;
-  background-position: -30% 0;
+  background-size: auto 80%;
+  background-position: -61% 20%;
 }
 #journey {
   background-image: url('/src/assets/img/bg_journey.svg');
@@ -164,7 +164,7 @@ h1, h2, h3 {
   font-family: "Barriecito";
 }
 @media (max-width: 1024px) {
-  #about{
+  #method{
     background-image: linear-gradient(to right, rgba(255,255,255, 0.8) 0 100%), url('/src/assets/img/bg_about.svg');
   } 
   #journey {
