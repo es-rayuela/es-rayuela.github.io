@@ -346,7 +346,7 @@ function CourseRegular() {
       <p className="text-sm text-center mt-4">*Válido para todas as modalidades: para pagamentos feitos por boleto antes da data de vencimento, 10% de desconto no valor da mensalidade.</p>
       <div className="flex justify-center">
         <a
-          href="https://wa.me/5548998091771"
+          href="https://wa.me/5541988162747"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#ed4c87] font-barriecito text-white p-4 mt-8 rounded-lg shadow-lg flex items-center justify-center hover:bg-[#d54479] transition-colors"
@@ -400,7 +400,7 @@ function ProjectPersonal() {
       <p className="text-sm text-center mt-4">*Válido para todas as modalidades: para pagamentos feitos por boleto antes da data de vencimento, 10% de desconto no valor da mensalidade.</p>
       <div className="flex justify-center">
         <a
-          href="https://wa.me/5548998091771"
+          href="https://wa.me/5541988162747"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#6ca7b7] font-barriecito text-white p-4 mt-8 rounded-lg shadow-lg flex items-center justify-center hover:bg-[#568592] transition-colors"
@@ -434,7 +434,7 @@ function Mentorship() {
       <p className="text-sm text-center mt-4">*Válido para todas as modalidades: para pagamentos feitos por boleto antes da data de vencimento, 10% de desconto no valor da mensalidade.</p>
       <div className="flex justify-center">
         <a
-          href="https://wa.me/5548998091771"
+          href="https://wa.me/5541988162747"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#f2ad5e] font-barriecito text-white p-4 mt-8 rounded-lg shadow-lg flex items-center justify-center hover:bg-[#d99b54] transition-colors"
@@ -486,7 +486,7 @@ function Clubes() {
       <p className="text-sm text-center mt-4">*Válido para todas as modalidades: para pagamentos feitos por boleto antes da data de vencimento, 10% de desconto no valor da mensalidade.</p>
       <div className="flex justify-center">
         <a
-          href="https://wa.me/5548998091771"
+          href="https://wa.me/5541988162747"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#f2ad5e] font-barriecito text-white p-4 mt-8 rounded-lg shadow-lg flex items-center justify-center hover:bg-[#d99b54] transition-colors"
@@ -524,6 +524,7 @@ function Taster() {
 }
 
 function Testimonials() {
+  //todo: add Embla carousel to testimonials;
   const testimonials = [
     {
       text: "Bianka é uma professora incrível, seus materiais e a organização da aula conseguem mesclar prática e teoria muito bem. Além de sempre passar feedbacks necessários e incentivar o contato com o espanhol por outros meios.",
@@ -614,7 +615,7 @@ function Testimonials() {
       </div>
       <div className="flex justify-center">
         <a
-          href="https://wa.me/5548998091771"
+          href="https://wa.me/5541988162747"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-none font-barriecito text-[#242736] p-4 mt-8 rounded-lg flex items-center justify-center hover:bg-[#d99b54] transition-colors border-[#242736] border-1"
@@ -634,7 +635,7 @@ function Contact() {
       <div className="grid md:grid-cols-8 gap-6 max-w-5xl mx-auto">
         <Card className="md:col-start-2 col-span-2 bg-white rounded-xl text-center shadow-none border-none p-4 gap-0">
           <a
-            href="https://wa.me/5548998091771"
+            href="https://wa.me/5541988162747"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#25D366] text-white p-4 rounded-full shadow-lg flex items-center mx-auto justify-center hover:bg-[#1ebd5a] transition-colors mb-4"
@@ -642,7 +643,7 @@ function Contact() {
           >
             <FaWhatsapp className="text-4xl" />
           </a>
-          <p><a href="https://wa.me/5548998091771" target="_blank">(48) 99809-1771</a></p>
+          <p><a href="https://wa.me/5541988162747" target="_blank">(48) 99809-1771</a></p>
         </Card>
         <Card className="col-span-2 bg-white rounded-xl text-center shadow-none border-none p-4 gap-0">
           <a
