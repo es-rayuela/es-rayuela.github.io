@@ -227,19 +227,19 @@ function Services() {
     {
       title: "Curso Regular",
       description:
-        "Para quem busca estrutura e consistência nas aulas, com o livro Gente Hoy e material personalizado.",
+        "Para quem quer aprender espanhol acompanhando os níveis do Quadro Europeu Comum de Referência para as Línguas (CEFR).",
       bg: '#ed4c87',
     },
     {
       title: "Projeto Personalizado",
       description:
-        "Curso sob medida com base no seu objetivo específico, como viagem, entrevista ou projeto de trabalho.",
+        "Para quem quer um curso 100% personalizado, feito sob medida, com foco total nas suas necessidades e nos seus objetivos pessoais.",
       bg: '#6ca7b7',
     },
     {
       title: "Mentoria para Autodidatas",
       description:
-        "Estude com autonomia com um plano estruturado e encontros mensais para dúvidas e conversação.",
+        "Para quem quer aprender com mais autonomia e flexibilidade horária: planos de estudos semanais e um encontro síncrono mensal.",
       bg: '#f2ad5e',
     },
   ];
@@ -302,7 +302,9 @@ function CourseRegular() {
     <section className="p-6 lg:p-12 bg-white text-[#242736] rounded-lg h-full">
       <h2 className="text-3xl font-barriecito text-center text-[#ed4c87] mb-6">Curso Regular</h2>
       <div className="max-w-3xl mx-auto space-y-4 text-lg">
-        <p>Ideal para quem deseja aprender com consistência e estrutura. O curso regular segue o Quadro Comum Europeu de Referência para Línguas (CEFR), com aulas ao vivo que combinam o livro <strong>Gente Hoy</strong>, propostas autorais e muito conteúdo cultural.</p>
+        <p>O curso regular segue a progressão de conteúdos conforme o estabelecido pelo Quadro Comum Europeu de Referência para Línguas (CEFR).</p>
+        <p>As aulas são ao vivo e nelas combinamos <strong>propostas do livro Gente Hoy</strong> + propostas para reforçar e aprofundar a <strong>gramática</strong> quando necessário + <strong>propostas autorais</strong> para reforçar as estruturas e o vocabulário aprendido + contato contínuo com <strong>material autêntico</strong>  - ou seja, muito conteúdo cultural.</p>
+        <p>Se você escolher aprender em <strong>grupo</strong>, a dinâmica é levemente diferente. Cada semana você terá uma <strong>aula ao vivo</strong> com o grupo + uma <strong>videoaula gravada</strong> que trará conteúdo que será desenvolvido na prática na próxima aula ao vivo.</p>
         <p>Está disponível em formato individual, dupla ou grupo.</p>
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           <Card className="bg-white border border-[#ed4c87] rounded-xl text-center p-4 gap-0">
@@ -310,27 +312,31 @@ function CourseRegular() {
               <FaUser className="text-3xl text-[#ed4c87] mx-auto mb-1 h-12" />
               <h3 className="text-xl font-semibold mb-2">Individual</h3>
             </div>
-            <p>R$400 <br /><span className="text-sm">(4 aulas/mês)</span></p>
+            <p>R$480 <br /><span className="text-sm">(4 aulas/mês)</span></p>
             <p className="text-sm">ou</p>
-            <p>R$800 <br /><span className="text-sm">(8 aulas/mês)</span></p>
+            <p>R$960 <br /><span className="text-sm">(8 aulas/mês)</span></p>
           </Card>
           <Card className="bg-white border border-[#ed4c87] rounded-xl text-center p-4 gap-0">
             <div>
               <FaUserFriends className="text-3xl text-[#ed4c87] mx-auto mb-1 h-12" />
               <h3 className="text-xl font-semibold mb-2">Dupla</h3>
             </div>
-            <p>R$650/mês</p>
+            <p>R$325/mês<br/>por pessoa <br/><span className="text-sm">(4 aulas/mês)</span></p>
+            <p className="text-sm">ou</p>
+            <p>R$650/mês<br/>por pessoa <span className="text-sm">(8 aulas/mês)</span></p>
           </Card>
           <Card className="bg-white border border-[#ed4c87] rounded-xl text-center p-4 gap-0">
             <div>
               <FaUsers className="text-3xl text-[#ed4c87] mx-auto mb-1 h-12" />
               <h3 className="text-xl font-semibold mb-2">Grupo</h3>
             </div>
+            <p className="text-sm mb-4">De 3 a 6 pessoas</p>
             <p>R$350/mês <br/>por pessoa</p>
             <p className="text-sm">(4 aulas ao vivo + 4 videoaulas gravadas)</p>
           </Card>
         </div>
       </div>
+      <p className="text-sm text-center mt-4">*Válido para todas as modalidades: para pagamentos feitos por boleto antes da data de vencimento, 10% de desconto no valor da mensalidade.</p>
       <div className="flex justify-center">
         <a
           href="https://wa.me/5548998091771"
@@ -351,27 +357,40 @@ function ProjectPersonal() {
     <section className="p-6 lg:p-12 bg-white text-[#242736] rounded-lg h-full">
       <h2 className="text-3xl font-barriecito text-center text-[#6ca7b7] mb-6">Projeto Personalizado</h2>
       <div className="max-w-3xl mx-auto space-y-4 text-lg">
-        <p>Ideal para quem tem um objetivo tangível com o espanhol: uma viagem, um projeto de trabalho, uma apresentação, uma entrevista ou outra demanda pontual. Aqui, o curso é 100% desenhado por mim com foco na sua necessidade.</p>
-        <p>Você aprende o que precisa, no tempo certo, com leveza, profundidade e beleza.</p>
+        <p>O curso baseado em um projeto personalizado segue uma <strong>estrutura exclusiva</strong>, que é criada pela professora, para desenvolver as habilidades e os conhecimentos necessários para que seja atingido o objetivo do projeto - determinado previamente pela aluna/o. <strong>Exemplos</strong> de objetivo: preparar-se para uma <strong>viagem</strong>; participar de <strong>reuniões</strong> ou entrevistas <strong>de trabalho</strong> em espanhol; apresentar um <strong>trabalho acadêmico</strong> em espanhol.</p>
+        <p>As <strong>aulas</strong> são <strong>ao vivo com propostas autorais</strong> - não trabalhamos nessa modalidade com livro de apoio, são propostas feitas sob medida+ propostas para reforçar e aprofundar a <strong>gramática</strong> quando necessário + contato contínuo com <strong>material autêntico</strong> do idioma - ou seja, bastante conteúdo cultural.</p>
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           <Card className="bg-white border border-[#6ca7b7] rounded-xl text-center p-6 gap-0">
             <div>
               <FaUser className="text-3xl text-[#6ca7b7] mx-auto mb-1 h-12" />
               <h3 className="text-xl font-semibold mb-2">Individual</h3>
             </div>
-            <p>R$600 <br/> <span className="text-sm">(4 aulas/mês)</span></p>
+            <p>R$680 <br/> <span className="text-sm">(4 aulas/mês)</span></p>
             <p className="text-sm">ou</p>
-            <p>R$1200 <br/> <span className="text-sm">(8 aulas/mês)</span></p>
+            <p>R$1.360,00 <br/> <span className="text-sm">(8 aulas/mês)</span></p>
           </Card>
           <Card className="bg-white border border-[#6ca7b7] rounded-xl text-center p-6 gap-0">
             <div>
               <FaUserFriends className="text-3xl text-[#6ca7b7] mx-auto mb-1 h-12" />
               <h3 className="text-xl font-semibold mb-2">Dupla</h3>
             </div>
-            <p>R$950 <br/> <span className="text-sm">(4 aulas/mês)</span></p>
+            <p>R$500/mês <br/> por pessoa <br/> <span className="text-sm">(4 aulas/mês)</span></p>
+            <p className="text-sm">ou</p>
+            <p>R$1.000/mês <br/> por pessoa <br/> <span className="text-sm">(8 aulas/mês)</span></p>
+          </Card>
+          <Card className="bg-white border border-[#6ca7b7] rounded-xl text-center p-6 gap-0">
+            <div>
+              <FaUsers className="text-3xl text-[#6ca7b7] mx-auto mb-1 h-12" />
+              <h3 className="text-xl font-semibold mb-2">Grupo</h3>
+            </div>
+            <p className="text-sm mb-4">De 3 a 4 pessoas</p>
+            <p>R$400/mês <br/> por pessoa <br/> <span className="text-sm">(4 aulas/mês)</span></p>
+            <p className="text-sm">ou</p>
+            <p>R$800/mês <br/> por pessoa <br/> <span className="text-sm">(8 aulas/mês)</span></p>
           </Card>
         </div>
       </div>
+      <p className="text-sm text-center mt-4">*Válido para todas as modalidades: para pagamentos feitos por boleto antes da data de vencimento, 10% de desconto no valor da mensalidade.</p>
       <div className="flex justify-center">
         <a
           href="https://wa.me/5548998091771"
@@ -392,26 +411,20 @@ function Mentorship() {
     <section className="p-6 lg:p-12 bg-white text-[#242736] rounded-lg h-full">
       <h2 className="text-3xl font-barriecito text-center text-[#f2ad5e] mb-6">Mentoria para Autodidatas</h2>
       <div className="max-w-3xl mx-auto space-y-4 text-lg">
-        <p>Você prefere estudar por conta própria, mas sente falta de direção, consistência e apoio? A mentoria Rayuela é pra você. Eu preparo um plano de estudos semanal com materiais selecionados, além de encontros mensais ao vivo para prática e dúvidas.</p>
-        <p>Ideal para quem quer liberdade, mas não quer estar só.</p>
+        <p>Você prefere estudar por conta própria, mas sente falta de direcionamento, consistência e apoio? A <strong>mentoria Rayuela</strong> é pra você.</p>
+        <p>Optando pela mentoria para autodidatas você receberá <strong>um plano de estudo por semana</strong> para você seguir no seu ritmo, e nos encontramos <strong>1 vez por mês</strong> para prática de <strong>conversação</strong> e esclarecimento de dúvidas.</p>
+        <p>Os planos de estudos são compostos por: <strong>propostas do livro Gente Hoy</strong> + propostas para reforçar e aprofundar a <strong>gramática</strong> quando necessário + propostas autorais para reforçar as estruturas e o vocabulário aprendido + contato contínuo com <strong>material autêntico</strong> - ou seja, muito conteúdo cultural.</p>
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          <Card className="bg-white border border-[#f2ad5e] rounded-xl text-center p-6">
-            <div>
-              <FaPlusCircle className="text-3xl text-[#f2ad5e] mx-auto mb-1 h-12" />
-              <h3 className="text-xl font-semibold mb-2">Incluso</h3>
-            </div>
-            <p>3 planos de estudo</p>
-            <p>+ 1 encontro ao vivo por mês</p>
-          </Card>
           <Card className="bg-white border border-[#f2ad5e] rounded-xl text-center p-6">
             <div>
               <FaMoneyBillWave className="text-3xl text-[#f2ad5e] mx-auto mb-1 h-12" />
               <h3 className="text-xl font-semibold mb-2">Valor</h3>
             </div>
-            <p>R$400/mês</p>
+            <p>R$360/mês</p>
           </Card>
         </div>
       </div>
+      <p className="text-sm text-center mt-4">*Válido para todas as modalidades: para pagamentos feitos por boleto antes da data de vencimento, 10% de desconto no valor da mensalidade.</p>
       <div className="flex justify-center">
         <a
           href="https://wa.me/5548998091771"
