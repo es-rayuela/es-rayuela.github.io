@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
-import { FaWhatsapp, FaUser, FaUserFriends, FaUsers, FaMoneyBillWave, FaPlusCircle, FaHeadphones, FaBook, FaPhotoVideo, FaRegEnvelope, FaInstagram, FaPen, FaHeart, FaFilm } from "react-icons/fa";
+import { FaWhatsapp, FaUser, FaUserFriends, FaUsers, FaMoneyBillWave, FaPlusCircle, FaHeadphones, FaBook, FaPhotoVideo, FaRegEnvelope, FaInstagram, FaPen, FaHeart, FaFilm, FaPlay } from "react-icons/fa";
 
 export default function RayuelaSite() {
   const [selectedService, setSelectedService] = useState("none");
@@ -507,16 +507,32 @@ function Taster() {
       <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         <Card className="bg-white border border-[#ed4c87] rounded-xl text-center p-4 gap-0">
           <FaHeadphones className="text-3xl text-[#ed4c87] mx-auto mb-1 h-12" />
-          <p>Playlist no YouTube com músicas latinas incríveis</p>
+          <p className="mb-4">Playlist no YouTube com músicas latinas incríveis</p>
+          <a
+            href="https://www.youtube.com/playlist?list=PLl9yiqWKeiN3mPYUwl9esxDgmqkAfctzr&si=Fv1QN7fJtPR8aPrN"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#ed4c87] font-barriecito text-white p-4 rounded-lg shadow-lg flex items-center justify-center hover:bg-[#d99b54] transition-colors"
+          >
+            <FaPlay className="text-2xl mr-4" /> Acessar playlist
+          </a>
         </Card>
         <Card className="bg-white border border-[#ed4c87] rounded-xl text-center p-4 gap-0">
           <FaBook className="text-3xl text-[#ed4c87] mx-auto mb-1 h-12" />
-          <p>Ebook gratuito cque vai te ajudar a reconhecer a principais interferências do português no seu espanhol - com atividades e inspiração Rayuelística</p>
+          <p className="mb-4">Guia gratuito cque vai te ajudar a reconhecer a principais interferências do português no seu espanhol.</p>
+          <a
+            href="https://gamma.app/docs/Um-breve-passeio-pelas-armadilhas-do-portugues-no-espanhol-Volu-k16d7w31wmcxmv8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#ed4c87] font-barriecito text-white p-4 rounded-lg shadow-lg flex items-center justify-center hover:bg-[#d99b54] transition-colors"
+          >
+            <FaPlay className="text-2xl mr-4" /> Acessar o guia
+          </a>
         </Card>
-        <Card className="bg-white border border-[#ed4c87] rounded-xl text-center p-4 gap-0">
+        {/* <Card className="bg-white border border-[#ed4c87] rounded-xl text-center p-4 gap-0">
           <FaPhotoVideo className="text-3xl text-[#ed4c87] mx-auto mb-1 h-12" />
           <p>Uma aula</p>
-        </Card>
+        </Card> */}
       </div>
       <p className="mt-4">É só clicar, baixar e aproveitar.💃🏻</p>
     </section>
@@ -643,7 +659,7 @@ function Contact() {
           >
             <FaWhatsapp className="text-4xl" />
           </a>
-          <p><a href="https://wa.me/5541988162747" target="_blank">(48) 99809-1771</a></p>
+          <p><a href="https://wa.me/5541988162747" target="_blank">(41) 98816-2747</a></p>
         </Card>
         <Card className="col-span-2 bg-white rounded-xl text-center shadow-none border-none p-4 gap-0">
           <a
