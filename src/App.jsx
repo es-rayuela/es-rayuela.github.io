@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import { FaWhatsapp, FaUser, FaUserFriends, FaUsers, FaMoneyBillWave, FaPlusCircle, FaHeadphones, FaBook, FaPhotoVideo, FaRegEnvelope, FaInstagram, FaPen, FaHeart, FaFilm, FaPlay } from "react-icons/fa";
+import { SiGoogleforms } from "react-icons/si";
 
 export default function RayuelaSite() {
   const [selectedService, setSelectedService] = useState("none");
@@ -312,7 +313,6 @@ function CourseRegular() {
         <p>O curso regular segue a progressão de conteúdos conforme o estabelecido pelo Quadro Comum Europeu de Referência para Línguas (CEFR).</p>
         <p>As aulas são ao vivo e nelas combinamos <strong>propostas do livro Gente Hoy</strong> + propostas para reforçar e aprofundar a <strong>gramática</strong> quando necessário + <strong>propostas autorais</strong> para reforçar as estruturas e o vocabulário aprendido + contato contínuo com <strong>material autêntico</strong>  - ou seja, muito conteúdo cultural.</p>
         <p>Se você escolher aprender em <strong>grupo</strong>, a dinâmica é levemente diferente. Cada semana você terá uma <strong>aula ao vivo</strong> com o grupo + uma <strong>videoaula gravada</strong> que trará conteúdo que será desenvolvido na prática na próxima aula ao vivo.</p>
-        <p>Está disponível em formato individual, dupla ou grupo.</p>
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           <Card className="bg-white border border-[#ed4c87] rounded-xl text-center p-4 gap-0">
             <div>
@@ -365,7 +365,7 @@ function ProjectPersonal() {
       <h2 className="text-3xl font-barriecito text-center text-[#6ca7b7] mb-6">Projeto Personalizado</h2>
       <div className="max-w-3xl mx-auto space-y-4 text-lg">
         <p>O curso baseado em um projeto personalizado segue uma <strong>estrutura exclusiva</strong>, que é criada pela professora, para desenvolver as habilidades e os conhecimentos necessários para que seja atingido o objetivo do projeto - determinado previamente pela aluna/o. <strong>Exemplos</strong> de objetivo: preparar-se para uma <strong>viagem</strong>; participar de <strong>reuniões</strong> ou entrevistas <strong>de trabalho</strong> em espanhol; apresentar um <strong>trabalho acadêmico</strong> em espanhol.</p>
-        <p>As <strong>aulas</strong> são <strong>ao vivo com propostas autorais</strong> - não trabalhamos nessa modalidade com livro de apoio, são propostas feitas sob medida+ propostas para reforçar e aprofundar a <strong>gramática</strong> quando necessário + contato contínuo com <strong>material autêntico</strong> do idioma - ou seja, bastante conteúdo cultural.</p>
+        <p>As <strong>aulas</strong> são <strong>ao vivo com propostas autorais</strong> - não trabalhamos nessa modalidade com livro de apoio, são propostas feitas sob medida + propostas para reforçar e aprofundar a <strong>gramática</strong> quando necessário + contato contínuo com <strong>material autêntico</strong> do idioma - ou seja, bastante conteúdo cultural.</p>
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           <Card className="bg-white border border-[#6ca7b7] rounded-xl text-center p-6 gap-0">
             <div>
@@ -455,7 +455,7 @@ function Clubes() {
         <p>Os ¡Clubes! são encontros em grupo para quem quer conviver em espanhol de forma leve e significativa, com pessoas que compartilham interesses semelhantes. Cada clube é formado por um número determinado de encontros ao vivo, com um cronograma claro e interessante: você saberá exatamente o que vamos discutir, assistir, experimentar ou criar em cada encontro.</p>
         <p>É um espaço de troca e prática real — onde o idioma deixa de ser apenas conteúdo e vira experiência.</p>
         <p>Ao final do ciclo, você recebe um feedback personalizado, com observações sobre pontos a desenvolver no seu espanhol, explicações e sugestões de exercícios para continuar avançando com autonomia.</p>
-        <p>É um formato pensado especialmente para quem já tem uma boa base no idioma ou para quem já fala muito bem, mas sente falta de oportunidades para manter o contato com o idioma de forma prazerosa e significativa.</p>
+        <p>É um formato pensado especialmente para quem já tem uma boa base no idioma ou para quem já fala bem, mas sente falta de oportunidades para manter o contato com o idioma.</p>
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           <Card className="bg-white border border-[#f2ad5e] rounded-xl text-center p-6">
             <div>
@@ -483,7 +483,6 @@ function Clubes() {
           </Card>
         </div>
       </div>
-      <p className="text-sm text-center mt-4">*Válido para todas as modalidades: para pagamentos feitos por boleto antes da data de vencimento, 10% de desconto no valor da mensalidade.</p>
       <div className="flex justify-center">
         <a
           href="https://wa.me/5541988162747"
@@ -492,7 +491,7 @@ function Clubes() {
           className="bg-[#f2ad5e] font-barriecito text-white p-4 mt-8 rounded-lg shadow-lg flex items-center justify-center hover:bg-[#d99b54] transition-colors"
           aria-label="Converse no WhatsApp"
         >
-          <FaWhatsapp className="text-2xl mr-4" /> Inscreva-se!
+          <SiGoogleforms className="text-2xl mr-4" /> Registre seu interesse e te avisaremos assim que lançarmos o próximo clube!
         </a>
       </div>
     </section>
@@ -543,24 +542,32 @@ function Testimonials() {
   //todo: add Embla carousel to testimonials;
   const testimonials = [
     {
-      text: "Bianka é uma professora incrível, seus materiais e a organização da aula conseguem mesclar prática e teoria muito bem. Além de sempre passar feedbacks necessários e incentivar o contato com o espanhol por outros meios.",
+      text: '"Eu precisava melhorar minha fluência na língua, pois ia dar aulas em países cujo a língua oficial é o espanhol. Uma coisa que achei fantástica em suas aulas que além de ela me atender em relação a o que eu precisava, me deu uma aula cultural de cada região em que fui dar as aulas, e isso me fez me aproximar muito e conhecer coisas fanáticas de cada lugar que nem sonhava que existia, e que tornaram a viagem ainda mais incrível. É como se eu tivesse ido para esses lugares antes mesmo de ir. E as aulas são levadas de forma leve e de fácil compreensão, super recomendo."',
+      author: "Witheney",
+    },
+    {
+      text: '"Bianka é uma professora incrível, seus materiais e a organização sa aula conseguem mesclar prática e teoria muito bem. Além de sempre passar feedbacks necessários e incentivar o contato com o espanhol por outros meios, como séries, filmes, apps e sites mais lúdicos. Com toda certeza sua aula vai ser divertida e irá sair muito mais confiante para falar espanhol."',
       author: "Isabela",
     },
     {
-      text: "Uma didática excelente, uma profissional super dedicada, competente e atenta. A Bianka consegue identificar o potencial da gente e nos conduz com segurança.",
+      text: '"Bianka é uma Profe ótima, super paciente, com um jeito simples e boas analogias para entender o conteúdo, que por sinal é maravilhoso, aprendi sobre cultura, gastronomia e muitos outros temas que ela aborda, além de tudo isso, é simpática e engraçada."',
+      author: "Gislaine",
+    },
+    {
+      text: '"Uma didática excelente, uma profissional super dedicada, competente, e atenta, indico muito! A Bianka consegue identificar o potencial da gente, nos conduz e nos dá segurança no processo de aprendizado!!"',
       author: "Nathalie",
     },
     {
-      text: "As aulas com a Bianka são leves, criativas e cheias de conteúdo cultural. Me sinto motivada a continuar estudando!",
-      author: "Renata",
+      text: '"Eu recomendo demais aulas com a Bianka 💕 Ela é uma professora dinâmica, que adapta a aula às necessidades do aluno e que nos guia no aprendizado com uma aula que nos anima, sem ser aquela coisa antiquada e fechada. Ela nos estimula a praticar e pesquisar a língua espanhola como ela se aplicaria no dia a dia, e isso faz do aprendizado muito mais rápido e estimulante!!!"',
+      author: "Paula",
     },
     {
-      text: "O carinho e a atenção que recebo nas aulas fazem toda a diferença. Nunca pensei que aprender espanhol pudesse ser tão prazeroso.",
-      author: "Carlos",
+      text: '"Hola. Yo me llamo Bruno. Tive a oportunidade de ter aula com a Profa. Bianka Silva, e recomendaria as aulas com ela para qualquer pessoa. Isso pelo fato de as aulas serem dinâmicas, direcionadas e vivas. Dinâmica pois parece um bate papo, o que estimula o diálogo e o treino da fala. Direcionada, pois tem muitos aspectos que direciona ao aluno, a sua particularidade (como por exemplo feeback que é feito p cada aluno, com suas dificuldades e o que ele precisa treinar mais). Viva por não estar toda fechada, os alunos constroem a aula juntos com o professor. Por tais motivos indico a experiência."',
+      author: "Bruno",
     },
     {
-      text: "Estou amando a experiência com a Rayuela. As aulas são incríveis e me sinto realmente aprendendo com sentido!",
-      author: "Fernanda",
+      text: '"As aulas são muito boas e atualizadas. A prof nos incentiva a falar e o espanhol sem medo. Usa vídeos e exemplos lúdicos.. fica bem fácil aprender assim. Gosto muito das aulas e recomendo. Gracias"',
+      author: "Carla",
     },
   ];
 
@@ -592,7 +599,7 @@ function Testimonials() {
           {visibleTestimonials.map((testimonial, i) => (
             <Card key={i}>
               <CardContent className="p-6">
-                <p>{testimonial.text}</p>
+                <p className="italic">{testimonial.text}</p>
                 <p className="mt-2 font-semibold">— {testimonial.author}</p>
               </CardContent>
             </Card>
