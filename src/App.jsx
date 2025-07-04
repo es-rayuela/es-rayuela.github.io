@@ -175,10 +175,10 @@ function Method() {
             href="https://wa.me/5541988162747"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#6ca7b7] font-barriecito text-white p-4 mt-8 rounded-lg flex items-center justify-center hover:bg-[#568592] transition-colors border-white border-2"
+            className="bg-[#6ca7b7] font-barriecito text-white p-4 mt-8 rounded-lg flex items-center justify-center hover:bg-[#568592] transition-colors border-white border-2 text-2xl"
             aria-label="Converse no WhatsApp"
           >
-            <FaWhatsapp className="text-2xl mr-4" /> Adorei! Quero começar!
+            <FaWhatsapp className="text-4xl mr-4" /> Adorei! Quero começar!
           </a>
         </div>
       </motion.div>
@@ -349,10 +349,10 @@ function CourseRegular() {
           href="https://wa.me/5541988162747"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#ed4c87] font-barriecito text-white p-4 mt-8 rounded-lg shadow-lg flex items-center justify-center hover:bg-[#d54479] transition-colors"
+          className="bg-[#ed4c87] font-barriecito text-white p-4 mt-8 rounded-lg shadow-lg flex items-center justify-center hover:bg-[#d54479] transition-colors text-2xl"
           aria-label="Converse no WhatsApp"
         >
-          <FaWhatsapp className="text-2xl mr-4" /> Inscreva-se!
+          <FaWhatsapp className="text-4xl mr-4" /> Quero me inscrever!
         </a>
       </div>
     </section>
@@ -403,10 +403,10 @@ function ProjectPersonal() {
           href="https://wa.me/5541988162747"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#6ca7b7] font-barriecito text-white p-4 mt-8 rounded-lg shadow-lg flex items-center justify-center hover:bg-[#568592] transition-colors"
+          className="bg-[#6ca7b7] font-barriecito text-white p-4 mt-8 rounded-lg shadow-lg flex items-center justify-center hover:bg-[#568592] transition-colors text-2xl"
           aria-label="Converse no WhatsApp"
         >
-          <FaWhatsapp className="text-2xl mr-4" /> Inscreva-se!
+          <FaWhatsapp className="text-4xl mr-4" /> Quero me inscrever!
         </a>
       </div>
     </section>
@@ -437,10 +437,10 @@ function Mentorship() {
           href="https://wa.me/5541988162747"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#f2ad5e] font-barriecito text-white p-4 mt-8 rounded-lg shadow-lg flex items-center justify-center hover:bg-[#d99b54] transition-colors"
+          className="bg-[#f2ad5e] font-barriecito text-white p-4 mt-8 rounded-lg shadow-lg flex items-center justify-center hover:bg-[#d99b54] transition-colors text-2xl"
           aria-label="Converse no WhatsApp"
         >
-          <FaWhatsapp className="text-2xl mr-4" /> Inscreva-se!
+          <FaWhatsapp className="text-4xl mr-4" /> Quero me inscrever!
         </a>
       </div>
     </section>
@@ -456,6 +456,7 @@ function Clubes() {
         <p>É um espaço de troca e prática real — onde o idioma deixa de ser apenas conteúdo e vira experiência.</p>
         <p>Ao final do ciclo, você recebe um feedback personalizado, com observações sobre pontos a desenvolver no seu espanhol, explicações e sugestões de exercícios para continuar avançando com autonomia.</p>
         <p>É um formato pensado especialmente para quem já tem uma boa base no idioma ou para quem já fala bem, mas sente falta de oportunidades para manter o contato com o idioma.</p>
+        <p>Registre seu interesse e te avisaremos assim que lançarmos o próximo clube!</p>
         <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           <Card className="bg-white border border-[#f2ad5e] rounded-xl text-center p-6">
             <div>
@@ -485,13 +486,13 @@ function Clubes() {
       </div>
       <div className="flex justify-center">
         <a
-          href="https://wa.me/5541988162747"
+          href="https://forms.gle/XQj3YxQTmYDx1HkNA"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#f2ad5e] font-barriecito text-white p-4 mt-8 rounded-lg shadow-lg flex items-center justify-center hover:bg-[#d99b54] transition-colors"
-          aria-label="Converse no WhatsApp"
+          className="bg-[#f2ad5e] font-barriecito text-white p-4 mt-8 rounded-lg shadow-lg flex items-center justify-center hover:bg-[#d99b54] transition-colors text-2xl"
+          aria-label="Link para o formulário de interesse"
         >
-          <SiGoogleforms className="text-2xl mr-4" /> Registre seu interesse e te avisaremos assim que lançarmos o próximo clube!
+          <SiGoogleforms className="text-4xl mr-4" /> Legal! Quero registrar meu interesse!
         </a>
       </div>
     </section>
@@ -641,10 +642,10 @@ function Testimonials() {
           href="https://wa.me/5541988162747"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-none font-barriecito text-[#242736] p-4 mt-8 rounded-lg flex items-center justify-center hover:bg-[#d99b54] transition-colors border-[#242736] border-1"
+          className="bg-none font-barriecito text-[#242736] p-4 mt-8 rounded-lg flex items-center justify-center hover:bg-[#d99b54] transition-colors border-[#242736] border-1 text-2xl"
           aria-label="Converse no WhatsApp"
         >
-          <FaWhatsapp className="text-2xl mr-4" /> Adorei! Quero começar!
+          <FaWhatsapp className="text-4xl mr-4" /> Adorei! Quero começar!
         </a>
       </div>
     </section>
