@@ -519,7 +519,7 @@ function Taster() {
         </Card>
         <Card className="bg-white border border-[#ed4c87] rounded-xl text-center p-4 gap-0">
           <FaBook className="text-3xl text-[#ed4c87] mx-auto mb-1 h-12" />
-          <p className="mb-4">Guia gratuito cque vai te ajudar a reconhecer a principais interferências do português no seu espanhol.</p>
+          <p className="mb-4">Guia gratuito que vai te ajudar a reconhecer a principais interferências do português no seu espanhol.</p>
           <a
             href="https://gamma.app/docs/Um-breve-passeio-pelas-armadilhas-do-portugues-no-espanhol-Volu-k16d7w31wmcxmv8"
             target="_blank"
@@ -529,12 +529,20 @@ function Taster() {
             <FaPlay className="text-2xl mr-4" /> Acessar o guia
           </a>
         </Card>
-        {/* <Card className="bg-white border border-[#ed4c87] rounded-xl text-center p-4 gap-0">
+        <Card className="bg-white border border-[#ed4c87] rounded-xl text-center p-4 gap-0">
           <FaPhotoVideo className="text-3xl text-[#ed4c87] mx-auto mb-1 h-12" />
-          <p>Uma aula</p>
-        </Card> */}
+          <p className="mb-4">Essa é a aula que vai te ajudar a aproveitar o guia da Rayuela ao máximo!</p>
+          <a
+            href="https://youtu.be/0DCUJ7NNB7w"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#ed4c87] font-barriecito text-white p-4 rounded-lg shadow-lg flex items-center justify-center hover:bg-[#d99b54] transition-colors"
+          >
+            <FaPlay className="text-2xl mr-4" /> Acessar a aula
+          </a>
+        </Card>
       </div>
-      <p className="mt-4">É só clicar, baixar e aproveitar.💃🏻</p>
+      <p className="mt-4">É só clicar e aproveitar.💃🏻</p>
     </section>
   );
 }
