@@ -209,7 +209,7 @@ function About() {
 function Journey() {
   return (
     <section id="journey" className="p-6 md:p-12 lg:p-24 bg-white text-[#242736]">
-      <h2 className="text-3xl font-barriecito text-center text-[#6ca7b7] mb-8">Sua Jornada pela Rayuela 🧡</h2>
+      <h2 className="text-3xl font-barriecito text-center text-[#6ca7b7] mb-8">Sua Jornada pela Rayuela</h2>
       <div className="max-w-3xl mx-auto space-y-4 text-lg">
         <p>Cada aluna/o percorre sua própria Rayuela, mas todos vivem uma experiência que vai além dos momentos de aula ao vivo. Veja o que espera por você:</p>
         <ul className="list-disc pl-5 space-y-2">
@@ -507,7 +507,7 @@ function Taster() {
       <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         <Card className="bg-white border border-[#ed4c87] rounded-xl text-center p-4 gap-0">
           <FaHeadphones className="text-3xl text-[#ed4c87] mx-auto mb-1 h-12" />
-          <p className="mb-4">Playlist no YouTube com músicas latinas incríveis</p>
+          <p className="mb-4">Playlist no YouTube com músicas latinas incríveis!</p>
           <a
             href="https://www.youtube.com/playlist?list=PLl9yiqWKeiN3mPYUwl9esxDgmqkAfctzr&si=Fv1QN7fJtPR8aPrN"
             target="_blank"
@@ -542,7 +542,7 @@ function Taster() {
           </a>
         </Card>
       </div>
-      <p className="mt-4">É só clicar e aproveitar.💃🏻</p>
+      <p className="mt-4">É só clicar e aproveitar. ⚡</p>
     </section>
   );
 }
