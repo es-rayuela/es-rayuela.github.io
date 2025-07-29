@@ -2,7 +2,7 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from "framer-motion";
 import { FaWhatsapp, FaUser, FaUserFriends, FaUsers, FaMoneyBillWave, FaPlusCircle, FaHeadphones, FaBook, FaPhotoVideo, FaRegEnvelope, FaInstagram, FaPen, FaHeart, FaFilm, FaPlay } from "react-icons/fa";
@@ -66,8 +66,10 @@ function Header() {
       <div className={`lg:fixed lg:left-4 z-50 transition-all duration-300 bg-[#6ca7b7] px-4 py-2 ${scrolled ? "fixed rounded-full lg:top-4 left-4" : "static lg:top-24"}`}>
         <img
           src={scrolled ? `/logo_rayuela_h.png` : `/logo_rayuela.jpg`}
-          alt="Logo Rayuela"
+          alt="Logo Rayuela - Escola de Espanhol Online com Abordagem Afetiva"
           className={`transition-all duration-300 ${scrolled ? "h-12" : "h-70 mx-auto"}`}
+          loading="eager" // O logo deve carregar imediatamente por ser acima da dobra
+          fetchPriority="high" // Prioridade alta para o logo que é um elemento crítico
         />
       </div>
       <Button
@@ -139,13 +141,17 @@ function Home() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
         >
-        <h2 className="text-4xl font-barriecito mb-4">SENTIDO PARA TU ESPAÑOL</h2>
+        <h1 className="text-4xl font-barriecito mb-4">SENTIDO PARA TU ESPAÑOL</h1>
         <p className="text-xl max-w-3xl mx-auto">
           <strong>¡BIENVENIDA! ¡BIENVENIDO!</strong> Se você chegou aqui, é porque precisa desenvolver algo em relação ao seu espanhol, certo? Seja <strong>aprender do zero</strong> ou <strong>dar continuidade</strong> ao seu aprendizado; fluir na <strong>conversação</strong>; desenvolver a <strong>escrita</strong>; preparar-se melhor para uma <strong>viagem</strong> ou para desempenhar funções no seu <strong>trabalho</strong>; ganhar mais <strong>confiança e autonomia</strong>; ou porque deseja estabelecer uma verdadeira <strong>conexão com o idioma e a cultura</strong>. Na Rayuela, <strong>o seu espanhol vai ganhar sentido</strong>, com toda a riqueza que essa palavra traz: sentido como rumo, <strong>direcionamento</strong>; e sentido como algo <strong>significativo</strong> - que faz sentido para você!
         </p>
       </motion.div>
       <div className="bg-home">
-        <img src="/src/assets/img/bg_home.svg" alt="bg" aria-label="no-label"/>
+        <img 
+          src="/src/assets/img/bg_home.svg" 
+          alt="Elemento gráfico ilustrativo da abordagem de ensino da Rayuela" 
+          loading="lazy" 
+        />
       </div>
     </section>
   );
@@ -225,32 +231,41 @@ function Journey() {
 function Services() {
   const [selected, setSelected] = useState("Curso Regular");
 
-  const services = [
+  // Usando useMemo para evitar recriação do array services a cada renderização
+  const services = useMemo(() => [
     {
       title: "Mentoria para Autodidatas",
       description:
         "Para quem quer aprender com mais autonomia e flexibilidade horária: planos de estudos semanais e um encontro síncrono mensal.",
       bg: '#f2ad5e',
+      id: "mentoria-autodidatas"
     },
     {
       title: "Curso Regular",
       description:
         "Para quem quer aprender espanhol acompanhando os níveis do Quadro Europeu Comum de Referência para as Línguas (CEFR).",
       bg: '#ed4c87',
+      id: "curso-regular"
     },
     {
       title: "Projeto Personalizado",
       description:
         "Para quem quer um curso 100% personalizado, feito sob medida, com foco total nas suas necessidades e nos seus objetivos pessoais.",
       bg: '#6ca7b7',
+      id: "projeto-personalizado"
     },
     {
       title: "¡Clubes!",
       description: "Seja do livro; do audiovisual; de escrita; ou de bem-estar e autodesenvolvimento: clubes para você se encontrar com outras pessoas com gostos em comum e falar, viver e aprender en español.",
-      bg: '#fff'
+      bg: '#fff',
+      id: "clubes"
     }
-  ];
-  const handleSmoothScroll = () => {
+  ], []);
+  
+  const handleSmoothScroll = (serviceId) => {
+    // Atualize a URL sem recarregar a página (para SEO e compartilhamento)
+    window.history.pushState({}, '', `#${serviceId}`);
+    
     if(window.matchMedia("(max-width: 1024px)").matches) {
       const target = document.querySelector("#services-content");
       if (target) {
@@ -258,6 +273,18 @@ function Services() {
       }
     }
   };
+  
+  // Verificar a URL ao carregar para definir o serviço selecionado com base na âncora
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const serviceFromHash = services.find(s => `#${s.id}` === hash);
+      if (serviceFromHash) {
+        setSelected(serviceFromHash.title);
+      }
+    }
+  }, [services]);
+  
   return (
     <section id="services" className="p-6 md:p-12 lg:p-24 bg-[#242736] text-white text-center">
       <h2 className="text-3xl font-barriecito text-center text-[#ed4c87] mb-8">
@@ -273,35 +300,44 @@ function Services() {
               title={service.title}
               description={service.description}
               bg={service.bg}
+              id={service.id}
               isActive={selected === service.title}
-              onClick={() => {setSelected(service.title); handleSmoothScroll()}}
+              onClick={() => {setSelected(service.title); handleSmoothScroll(service.id)}}
             />
           ))}
         </div>
 
         {/* Coluna direita com o conteúdo detalhado */}
         <div className="lg:col-span-2" id="services-content">
-          {selected === "Curso Regular" && <CourseRegular />}
-          {selected === "Projeto Personalizado" && <ProjectPersonal />}
-          {selected === "Mentoria para Autodidatas" && <Mentorship />}
-          {selected === "¡Clubes!" && <Clubes />}
+          {selected === "Curso Regular" && <div id="curso-regular"><CourseRegular /></div>}
+          {selected === "Projeto Personalizado" && <div id="projeto-personalizado"><ProjectPersonal /></div>}
+          {selected === "Mentoria para Autodidatas" && <div id="mentoria-autodidatas"><Mentorship /></div>}
+          {selected === "¡Clubes!" && <div id="clubes"><Clubes /></div>}
         </div>
       </div>
     </section>
   );
 }
 
-function ServiceCard({ title, description, onClick, isActive, bg }) {
+function ServiceCard({ title, description, onClick, isActive, bg, id }) {
+  const serviceId = id || title.toLowerCase().replace(/\s+/g, '-');
+  
   return (
-    <div
-      onClick={onClick}
-      className={`cursor-pointer p-6 rounded-lg transition-all shadow-sm bg-[${bg}] text-white shadow-md border-3
+    <a 
+      href={`#${serviceId}`}
+      onClick={(e) => {
+        e.preventDefault(); // Impede o comportamento padrão
+        onClick(); // Executa o callback original
+      }}
+      className={`block cursor-pointer p-6 rounded-lg transition-all shadow-sm bg-[${bg}] text-white shadow-md border-3
         ${isActive ? 'border-white' : 'border-transparent'}
+        hover:shadow-lg text-decoration-none
       `}
+      aria-label={`Serviço: ${title}`}
     >
       <h3 className="text-xl font-bold mb-2">{title}</h3>
       <p className="text-sm">{description}</p>
-    </div>
+    </a>
   );
 }
 

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://es-rayuela.github.io/sitemap.xml
+
+# Permita que todos os bots acessem todo o site
+# O sitemap está disponível na URL acima
