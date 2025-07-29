@@ -22,7 +22,7 @@ export default function RayuelaSite() {
         <Services setSelectedService={setSelectedService} />
         {selectedService === "Curso Regular" && <CourseRegular />}
         {selectedService === "Projeto Personalizado" && <ProjectPersonal />}
-        {selectedService === "Mentoria para Autodidatas" && <Mentorship />}
+        {selectedService === "Acompanhamento para Autodidatas" && <Mentorship />}
         {selectedService === "¡Clubes!" && <Clubes />}
         <Taster />
         <Testimonials />
@@ -234,11 +234,11 @@ function Services() {
   // Usando useMemo para evitar recriação do array services a cada renderização
   const services = useMemo(() => [
     {
-      title: "Mentoria para Autodidatas",
+      title: "Acompanhamento para Autodidatas",
       description:
         "Para quem quer aprender com mais autonomia e flexibilidade horária: planos de estudos semanais e um encontro síncrono mensal.",
       bg: '#f2ad5e',
-      id: "mentoria-autodidatas"
+      id: "acompanhamento-autodidatas"
     },
     {
       title: "Curso Regular",
@@ -311,7 +311,7 @@ function Services() {
         <div className="lg:col-span-2" id="services-content">
           {selected === "Curso Regular" && <div id="curso-regular"><CourseRegular /></div>}
           {selected === "Projeto Personalizado" && <div id="projeto-personalizado"><ProjectPersonal /></div>}
-          {selected === "Mentoria para Autodidatas" && <div id="mentoria-autodidatas"><Mentorship /></div>}
+          {selected === "Acompanhamento para Autodidatas" && <div id="acompanhamento-autodidatas"><Mentorship /></div>}
           {selected === "¡Clubes!" && <div id="clubes"><Clubes /></div>}
         </div>
       </div>
@@ -452,10 +452,10 @@ function ProjectPersonal() {
 function Mentorship() {
   return (
     <section className="p-6 lg:p-12 bg-white text-[#242736] rounded-lg h-full">
-      <h2 className="text-3xl font-barriecito text-center text-[#f2ad5e] mb-6">Mentoria para Autodidatas</h2>
+      <h2 className="text-3xl font-barriecito text-center text-[#f2ad5e] mb-6">Acompanhamento para Autodidatas</h2>
       <div className="max-w-3xl mx-auto space-y-4 text-lg">
-        <p>Você prefere estudar por conta própria, mas sente falta de direcionamento, consistência e apoio? A <strong>mentoria Rayuela</strong> é pra você.</p>
-        <p>Optando pela mentoria para autodidatas você receberá <strong>um plano de estudo por semana</strong> para você seguir no seu ritmo, e nos encontramos <strong>1 vez por mês</strong> para prática de <strong>conversação</strong> e esclarecimento de dúvidas.</p>
+        <p>Você prefere estudar por conta própria, mas sente falta de direcionamento, consistência e apoio? O <strong>acompanhamento Rayuela</strong> é pra você.</p>
+        <p>Optando pelo acompanhamento para autodidatas você receberá <strong>um plano de estudo por semana</strong> para você seguir no seu ritmo, e nos encontramos <strong>1 vez por mês</strong> para prática de <strong>conversação</strong> e esclarecimento de dúvidas.</p>
         <p>Os planos de estudos são compostos por: <strong>propostas do livro Gente Hoy</strong> + propostas para reforçar e aprofundar a <strong>gramática</strong> quando necessário + propostas autorais para reforçar as estruturas e o vocabulário aprendido + contato contínuo com <strong>material autêntico</strong> - ou seja, muito conteúdo cultural.</p>
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           <Card className="bg-white border border-[#f2ad5e] rounded-xl text-center p-6">
