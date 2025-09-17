@@ -16,16 +16,17 @@ export default function RayuelaSite() {
       <Header />  
       <main className="font-nunito bg-[#ffffff] text-[#242736]" role="main">
         <Home />
+        <Headline />
         <Method />
-        <About />
-        <Journey />
         <Services setSelectedService={setSelectedService} />
         {selectedService === "Curso Regular" && <CourseRegular />}
         {selectedService === "Projeto Personalizado" && <ProjectPersonal />}
         {selectedService === "Acompanhamento para Autodidatas" && <Mentorship />}
         {selectedService === "¡Clubes!" && <Clubes />}
+        <Journey />
         <Taster />
         <Testimonials />
+        <About />
         <Contact />
         <Footer />
       </main>
@@ -234,13 +235,6 @@ function Services() {
   // Usando useMemo para evitar recriação do array services a cada renderização
   const services = useMemo(() => [
     {
-      title: "Acompanhamento para Autodidatas",
-      description:
-        "Para quem quer aprender com mais autonomia e flexibilidade horária: planos de estudos semanais e um encontro síncrono mensal.",
-      bg: '#f2ad5e',
-      id: "acompanhamento-autodidatas"
-    },
-    {
       title: "Curso Regular",
       description:
         "Para quem quer aprender espanhol acompanhando os níveis do Quadro Europeu Comum de Referência para as Línguas (CEFR).",
@@ -250,9 +244,16 @@ function Services() {
     {
       title: "Projeto Personalizado",
       description:
-        "Para quem quer um curso 100% personalizado, feito sob medida, com foco total nas suas necessidades e nos seus objetivos pessoais.",
+      "Para quem quer um curso 100% personalizado, feito sob medida, com foco total nas suas necessidades e nos seus objetivos pessoais.",
       bg: '#6ca7b7',
       id: "projeto-personalizado"
+    },
+    {
+      title: "Acompanhamento para Autodidatas",
+      description:
+        "Para quem quer aprender com mais autonomia e flexibilidade horária: planos de estudos semanais e um encontro síncrono mensal.",
+      bg: '#f2ad5e',
+      id: "acompanhamento-autodidatas"
     },
     {
       title: "¡Clubes!",
@@ -347,8 +348,7 @@ function CourseRegular() {
       <h2 className="text-3xl font-barriecito text-center text-[#ed4c87] mb-6">Curso Regular</h2>
       <div className="max-w-3xl mx-auto space-y-4 text-lg">
         <p>O curso regular segue a progressão de conteúdos conforme o estabelecido pelo Quadro Comum Europeu de Referência para Línguas (CEFR).</p>
-        <p>As aulas são ao vivo e nelas combinamos <strong>propostas do livro Gente Hoy</strong> + propostas para reforçar e aprofundar a <strong>gramática</strong> quando necessário + <strong>propostas autorais</strong> para reforçar as estruturas e o vocabulário aprendido + contato contínuo com <strong>material autêntico</strong>  - ou seja, muito conteúdo cultural.</p>
-        <p>Se você escolher aprender em <strong>grupo</strong>, a dinâmica é levemente diferente. Cada semana você terá uma <strong>aula ao vivo</strong> com o grupo + uma <strong>videoaula gravada</strong> que trará conteúdo que será desenvolvido na prática na próxima aula ao vivo.</p>
+        <p>As aulas são ao vivo, pelo Google Meet, e nelas combinamos <strong>propostas do livro Aula Internacional Plus</strong> + propostas para reforçar e aprofundar a <strong>gramática</strong> quando necessário + <strong>propostas autorais</strong> para reforçar as estruturas e o vocabulário aprendido + contato contínuo com <strong>material autêntico</strong>  - ou seja, muito conteúdo cultural.</p>
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           <Card className="bg-white border border-[#ed4c87] rounded-xl text-center p-4 gap-0">
             <div>
@@ -375,7 +375,7 @@ function CourseRegular() {
             </div>
             <p className="text-sm mb-4">De 3 a 6 pessoas</p>
             <p>R$350/mês <br/>por pessoa</p>
-            <p className="text-sm">(4 aulas ao vivo + 4 videoaulas gravadas)</p>
+            <p className="text-sm">(8 aulas/mês)</p>
           </Card>
         </div>
       </div>
@@ -401,7 +401,7 @@ function ProjectPersonal() {
       <h2 className="text-3xl font-barriecito text-center text-[#6ca7b7] mb-6">Projeto Personalizado</h2>
       <div className="max-w-3xl mx-auto space-y-4 text-lg">
         <p>O curso baseado em um projeto personalizado segue uma <strong>estrutura exclusiva</strong>, que é criada pela professora, para desenvolver as habilidades e os conhecimentos necessários para que seja atingido o objetivo do projeto - determinado previamente pela aluna/o. <strong>Exemplos</strong> de objetivo: preparar-se para uma <strong>viagem</strong>; participar de <strong>reuniões</strong> ou entrevistas <strong>de trabalho</strong> em espanhol; apresentar um <strong>trabalho acadêmico</strong> em espanhol.</p>
-        <p>As <strong>aulas</strong> são <strong>ao vivo com propostas autorais</strong> - não trabalhamos nessa modalidade com livro de apoio, são propostas feitas sob medida + propostas para reforçar e aprofundar a <strong>gramática</strong> quando necessário + contato contínuo com <strong>material autêntico</strong> do idioma - ou seja, bastante conteúdo cultural.</p>
+        <p>As <strong>aulas</strong> são <strong>ao vivo</strong>, pelo Google Meet, <strong>com propostas autorais</strong> - não trabalhamos nessa modalidade com livro de apoio, são propostas feitas sob medida + propostas para reforçar e aprofundar a <strong>gramática</strong> quando necessário + contato contínuo com <strong>material autêntico</strong> do idioma - ou seja, bastante conteúdo cultural.</p>
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           <Card className="bg-white border border-[#6ca7b7] rounded-xl text-center p-6 gap-0">
             <div>
@@ -456,7 +456,7 @@ function Mentorship() {
       <div className="max-w-3xl mx-auto space-y-4 text-lg">
         <p>Você prefere estudar por conta própria, mas sente falta de direcionamento, consistência e apoio? O <strong>acompanhamento Rayuela</strong> é pra você.</p>
         <p>Optando pelo acompanhamento para autodidatas você receberá <strong>um plano de estudo por semana</strong> para você seguir no seu ritmo, e nos encontramos <strong>1 vez por mês</strong> para prática de <strong>conversação</strong> e esclarecimento de dúvidas.</p>
-        <p>Os planos de estudos são compostos por: <strong>propostas do livro Gente Hoy</strong> + propostas para reforçar e aprofundar a <strong>gramática</strong> quando necessário + propostas autorais para reforçar as estruturas e o vocabulário aprendido + contato contínuo com <strong>material autêntico</strong> - ou seja, muito conteúdo cultural.</p>
+        <p>Os planos de estudos são compostos por: <strong>propostas do livro Aula Internacional Plus</strong> + propostas para reforçar e aprofundar a <strong>gramática</strong> quando necessário + propostas autorais para reforçar as estruturas e o vocabulário aprendido + contato contínuo com <strong>material autêntico</strong> - ou seja, muito conteúdo cultural.</p>
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           <Card className="bg-white border border-[#f2ad5e] rounded-xl text-center p-6">
             <div>
@@ -579,6 +579,13 @@ function Taster() {
         </Card>
       </div>
       <p className="mt-4">É só clicar e aproveitar. ⚡</p>
+    </section>
+  );
+}
+function Headline() {
+  return (
+    <section id="taster" className="p-6 lg:p-6 bg-[#ed4c87] text-white text-center">
+      <p className="text-3xl h2 font-barriecito">Matrículas abertas o ano todo! ✨</p>
     </section>
   );
 }
