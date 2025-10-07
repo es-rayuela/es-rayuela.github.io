@@ -11,6 +11,28 @@ import { SiGoogleforms } from "react-icons/si";
 export default function RayuelaSite() {
   const [selectedService, setSelectedService] = useState("none");
 
+  // Ao carregar a página com hash (ex.: /#services), rola suavemente até a âncora
+  useEffect(() => {
+    const hash = window.location?.hash;
+    if (hash && hash.startsWith('#')) {
+      // Aguarda o conteúdo montar
+      const tryScroll = () => {
+        const target = document.querySelector(hash);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          return true;
+        }
+        return false;
+      };
+      if (!tryScroll()) {
+        // Tenta novamente no próximo frame caso o elemento ainda não exista
+        requestAnimationFrame(() => {
+          tryScroll();
+        });
+      }
+    }
+  }, []);
+
   return (
     <>
       <Header />  

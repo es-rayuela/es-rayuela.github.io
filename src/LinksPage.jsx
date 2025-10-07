@@ -31,7 +31,7 @@ export default function LinksPage() {
         <nav className="w-full flex flex-col gap-4" aria-label="Links principais">
           <LinkButton
             href="/#services"
-            label="Veja as formas de aprender espanhol na Rayuela — e escolha a que faz mais sentido pra você."
+            label="Conheça as formas de aprender espanhol na Rayuela: e escolha a que faz mais sentido pra você!"
             bg="#ed4c87"
             hover="#d54479"
           />
