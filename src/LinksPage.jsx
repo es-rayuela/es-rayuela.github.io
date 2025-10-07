@@ -44,7 +44,7 @@ export default function LinksPage() {
           />
           <LinkButton
             href="https://www.youtube.com/playlist?list=PLl9yiqWKeiN3mPYUwl9esxDgmqkAfctzr&si=Fv1QN7fJtPR8aPrN"
-            label="Imersão começa aqui: ouça a playlist que preparei pra você!"
+            label="🎶 Imersão começa aqui: ouça a playlist que preparei pra você!"
             bg="#f2ad5e"
             hover="#d99b54"
             external
