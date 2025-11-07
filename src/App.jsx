@@ -2,11 +2,15 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect, useMemo } from "react";
-// eslint-disable-next-line no-unused-vars
+import { useState, useEffect, useMemo, lazy, Suspense } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaWhatsapp, FaUser, FaUserFriends, FaUsers, FaMoneyBillWave, FaPlusCircle, FaHeadphones, FaBook, FaPhotoVideo, FaRegEnvelope, FaInstagram, FaPen, FaHeart, FaFilm, FaPlay } from "react-icons/fa";
 import { SiGoogleforms } from "react-icons/si";
+
+// Lazy loading de componentes abaixo da dobra para melhorar performance
+const LazyTestimonials = lazy(() => Promise.resolve({ default: Testimonials }));
+const LazyAbout = lazy(() => Promise.resolve({ default: About }));
+const LazyContact = lazy(() => Promise.resolve({ default: Contact }));
 
 export default function RayuelaSite() {
   const [selectedService, setSelectedService] = useState("none");
@@ -47,9 +51,15 @@ export default function RayuelaSite() {
         {selectedService === "¡Clubes!" && <Clubes />}
         <Journey />
         <Taster />
-        <Testimonials />
-        <About />
-        <Contact />
+        <Suspense fallback={<div className="p-12 text-center">Carregando...</div>}>
+          <LazyTestimonials />
+        </Suspense>
+        <Suspense fallback={<div className="p-12 text-center">Carregando...</div>}>
+          <LazyAbout />
+        </Suspense>
+        <Suspense fallback={<div className="p-12 text-center">Carregando...</div>}>
+          <LazyContact />
+        </Suspense>
         <Footer />
       </main>
       <WhatsappButton />
@@ -88,9 +98,11 @@ function Header() {
     <>
       <div className={`lg:fixed lg:left-4 z-50 transition-all duration-300 bg-[#6ca7b7] px-4 py-2 ${scrolled ? "fixed rounded-full lg:top-4 left-4" : "static lg:top-24"}`}>
         <img
-          src={scrolled ? `/logo_rayuela_h.png` : `/logo_rayuela.jpg`}
+          src={scrolled ? `/logo_rayuela_h.webp` : `/logo_rayuela.webp`}
           alt="Logo Rayuela - Escola de Espanhol Online com Abordagem Afetiva"
           className={`transition-all duration-300 ${scrolled ? "h-12" : "h-70 mx-auto"}`}
+          width={scrolled ? "150" : "280"}
+          height={scrolled ? "48" : "280"}
           loading="eager" // O logo deve carregar imediatamente por ser acima da dobra
           fetchPriority="high" // Prioridade alta para o logo que é um elemento crítico
         />
@@ -169,13 +181,6 @@ function Home() {
           <strong>¡BIENVENIDA! ¡BIENVENIDO!</strong> Se você chegou aqui, é porque precisa desenvolver algo em relação ao seu espanhol, certo? Seja <strong>aprender do zero</strong> ou <strong>dar continuidade</strong> ao seu aprendizado; fluir na <strong>conversação</strong>; desenvolver a <strong>escrita</strong>; preparar-se melhor para uma <strong>viagem</strong> ou para desempenhar funções no seu <strong>trabalho</strong>; ganhar mais <strong>confiança e autonomia</strong>; ou porque deseja estabelecer uma verdadeira <strong>conexão com o idioma e a cultura</strong>. Na Rayuela, <strong>o seu espanhol vai ganhar sentido</strong>, com toda a riqueza que essa palavra traz: sentido como rumo, <strong>direcionamento</strong>; e sentido como algo <strong>significativo</strong> - que faz sentido para você!
         </p>
       </motion.div>
-      <div className="bg-home">
-        <img 
-          src="/src/assets/img/bg_home.svg" 
-          alt="Elemento gráfico ilustrativo da abordagem de ensino da Rayuela" 
-          loading="lazy" 
-        />
-      </div>
     </section>
   );
 }
