@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useMemo, lazy, Suspense } from "react";
-import { AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { FaWhatsapp, FaUser, FaUserFriends, FaUsers, FaMoneyBillWave, FaPlusCircle, FaHeadphones, FaBook, FaPhotoVideo, FaRegEnvelope, FaInstagram, FaPen, FaHeart, FaFilm, FaPlay } from "react-icons/fa";
 import { SiGoogleforms } from "react-icons/si";
 
