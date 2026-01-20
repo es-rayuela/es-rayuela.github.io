@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useMemo, lazy, Suspense } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { FaWhatsapp, FaUser, FaUserFriends, FaUsers, FaMoneyBillWave, FaPlusCircle, FaHeadphones, FaBook, FaPhotoVideo, FaRegEnvelope, FaInstagram, FaPen, FaHeart, FaFilm, FaPlay } from "react-icons/fa";
 import { SiGoogleforms } from "react-icons/si";
 
@@ -401,7 +401,7 @@ function CourseRegular() {
               <h3 className="text-xl font-semibold mb-2">Grupo</h3>
             </div>
             <p className="text-sm mb-4">De 3 a 6 pessoas</p>
-            <p>R$350/mês <br/>por pessoa</p>
+            <p>R$450/mês <br/>por pessoa</p>
             <p className="text-sm">(8 aulas/mês)</p>
           </Card>
         </div>
