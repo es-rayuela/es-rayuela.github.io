@@ -385,7 +385,10 @@ function viewIntro(){
     <p style="margin-bottom:0">Que tal me contar um pouco sobre isso para que nossa conversa já comece com sentido?</p>
    </div>
    <div class="it-bottom">
-    <div style="margin-top:22px"><button class="btn dark-btn" onclick="comecar()">⚡ Sí, ¡claro!</button></div>
+    <div style="margin-top:22px;display:flex;gap:10px;flex-wrap:wrap">
+     <button class="btn dark-btn" onclick="comecar()">⚡ Sí, ¡claro!</button>
+     <button class="btn ghost-light" onclick="verDetalhesIntro()">Entender como seria aprender espanhol na Rayuela</button>
+    </div>
     <p class="muted" style="margin-top:14px">Leva cerca de 3 minutos. :)</p>
     <p class="muted" style="margin-top:4px">Ao final, você também vai entender como é aprender espanhol na Rayuela.</p>
     ${retomarBanner()}
@@ -398,8 +401,17 @@ function viewIntro(){
    </div>
    ${palabraCard()}
   </div>
+ </div>
+ <div id="detalhesIntro" style="display:none;margin-top:22px">
+  <div class="card">
+   <span class="kicker" style="color:var(--azul)">Como seria aprender aqui</span>
+   <h3>O que acompanha você na Rayuela</h3>
+   <p class="muted" style="margin:8px 0 14px">A experiência não termina quando a aula ao vivo acaba: seu espanhol segue sendo construído por materiais, registros e um ambiente organizado.</p>
+   ${cardsExperiencia(false)}
+  </div>
  </div>`;
 }
+function verDetalhesIntro(){ const d=document.getElementById('detalhesIntro'); if(d){ d.style.display='block'; d.scrollIntoView({behavior:'smooth',block:'start'}); } track('VerDetalhesIntro'); }
 const SERIES=[
  {p:"La Casa de Papel",c:"Espanha",t:"O assalto mais famoso da TV, com máscaras de Dalí e “Bella Ciao” grudada na cabeça. (Espanha)",o:"Netflix"},
  {p:"Élite",c:"Espanha",t:"Mistério, desejo e desigualdade num colégio de ricos. (Espanha)",o:"Netflix"},
